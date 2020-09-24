@@ -11,6 +11,8 @@ const App = () => {
   const [weatherData, setWeatherData] = useState(null);
   const [zipcode, updateZipcode] = useState(null);
 
+  // Normally, I would put the access token in a .env file utilizing the dot-env package
+  // I would also normally put fetch calls in a separate directory for client APIs
   async function fetchData(zipcode = "10036") {
     const res = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?zip=${zipcode},us&appid=709847967f5e54b97308c1b2cae4dee5`
